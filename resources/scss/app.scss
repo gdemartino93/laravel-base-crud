@@ -7,6 +7,11 @@ header{
     height: 10vh;
     background: #f69d3c;
 }
+footer{
+    height: 10vh;
+    background-color: #f69d3c;
+    flex: 1;
+}
 .myCard {
   box-sizing: border-box;
   width: 220px;
@@ -31,5 +36,24 @@ header{
 
     &:active {
     transform: scale(0.95) rotateZ(1.7deg);
+    }
+}
+.moving{
+    animation: moveTo 10s linear infinite;
+    position: relative;
+    left: 0;
+}
+.pio{
+    background-image: url("http://misteridiassisi.it/wp-content/uploads/2014/01/1-Il-santo-che-volava-.jpg");
+    width: 220px;
+    height: 250px;
+}
+
+@keyframes moveTo {
+    from {
+        left: -20%
+    }
+    to{
+        left: 100%;
     }
 }

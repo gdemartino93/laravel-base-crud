@@ -1,4 +1,4 @@
-@extends("layouts.main-layouts");
+@extends("layouts.main-layouts")
 
 @section('contents')
 <div class="container d-flex flex-wrap justify-content-center">
@@ -10,9 +10,7 @@
             <span>{{ $saint["dataDiNascita"] }} </span>
             <span>{{ $saint["numeroDiMiracoli"] }} </span>
         </div>
-    
     </a>
-
     @endforeach
 </div>
 
