@@ -16,8 +16,14 @@ class SaintFactory extends Factory
      */
     public function definition()
     {
+        // creazione dati fake per testare 
         return [
-            //
+            "nome" => fake() -> name() ,
+            "luogoDiNascita" => fake() -> city(),
+            "dataDiNascita" => fake() -> dateTime(),
+            "numeroDiMiracoli" => fake() ->numberBetween(1,100),
         ];
     }
 }
+
+

@@ -9,8 +9,8 @@ class Saint extends Model
 {
     use HasFactory;
     private $nome;
-    private $luogoNascita;
-    private $dataBenedizione;
-    private $numeroMiracoli;
+    private $luogoDiNascita;
+    private $dataDiNascita;
+    private $numeroDiMiracoli;
     
 }

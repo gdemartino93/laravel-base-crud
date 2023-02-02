@@ -20,6 +20,8 @@ return new class extends Migration
             $table -> string('luogoDiNascita',50);
             $table -> date('dataDiNascita');
             $table -> mediumInteger('numeroDiMiracoli') -> default(0);
+
+            $table -> timestamps();
         });
     }
 
