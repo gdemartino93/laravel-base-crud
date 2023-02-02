@@ -1,1 +1,35 @@
-@import '~bootstrap/scss/bootstrap'
+@import '~bootstrap/scss/bootstrap';
+a{
+    text-decoration: none;
+    color: inherit;
+}
+header{
+    height: 10vh;
+    background: #f69d3c;
+}
+.myCard {
+  box-sizing: border-box;
+  width: 220px;
+  height: 250px;
+  background: rgb(155,60,5);
+  background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);  box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+  border-radius: 17px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bolder;
+  margin: 10px;
+
+
+    &:hover {
+    border: 1px solid black;
+    transform: scale(1.05);
+    }
+
+    &:active {
+    transform: scale(0.95) rotateZ(1.7deg);
+    }
+}

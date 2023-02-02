@@ -3,11 +3,28 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\Saint;
 class MainController extends Controller
 {
     public function home(){
 
-        return view('pages.home');
+        $saints = Saint::all();
+
+        $data = [
+            "saints" => $saints
+        ];
+        return view('pages.home', $data);
+    }
+
+    public function saint($id){
+
+        $saint = Saint::find($id);
+        $data = [
+            "saint" => $saint
+        ];
+        
+        
+        return view('pages.saint', $data);
+        var_dump($id);
     }
 }
