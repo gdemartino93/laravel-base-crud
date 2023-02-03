@@ -30,6 +30,6 @@ class MainController extends Controller
         $saint = Saint::find($id);
         $saint -> delete();
        
-        return redirect() -> route('home');
+        return redirect() -> route('saint.home');
     }
 }
