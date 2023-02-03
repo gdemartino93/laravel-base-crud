@@ -15,5 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/', [MainController::class,"home"]);
-Route::get('/saint/{id}', [MainController::class,"saint"]);
+Route::get('/', [MainController::class,'home'])
+        -> name('home');
+Route::get('/saint/single/{id}', [MainController::class,'saint']);
+Route::get('/saint/delete/{id}', [MainController::class,'delete'])
+        -> name('saint.delete');

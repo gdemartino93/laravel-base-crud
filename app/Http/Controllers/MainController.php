@@ -22,9 +22,14 @@ class MainController extends Controller
         $data = [
             "saint" => $saint
         ];
-        
-        
+
         return view('pages.saint', $data);
-        var_dump($id);
+    }
+    public function delete($id){
+
+        $saint = Saint::find($id);
+        $saint -> delete();
+       
+        return redirect() -> route('home');
     }
 }

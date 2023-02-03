@@ -1,4 +1,4 @@
-@extends("layouts.main-layouts");
+@extends("layouts.main-layouts")
 
 @section('contents')
 <div class="wrapper d-flex align-items-center">
