@@ -7,6 +7,5 @@
         <a href="{{route('saint.delete',['id' => $saint -> id])}}"> 
             <i class="fa-solid fa-square-minus"></i>
         </a>
-
     </div>
 </a>

@@ -7,6 +7,13 @@ a{
 header{
     height: 10vh;
     background: #f69d3c;
+    display: flex;
+    align-items: center;
+    i{
+        font-size:50px;
+        color: white;
+        cursor: pointer;
+    }
 }
 footer{
     height: 10vh;

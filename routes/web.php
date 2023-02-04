@@ -20,3 +20,5 @@ Route::get('/', [MainController::class,'home'])
 Route::get('/saint/single/{id}', [MainController::class,'saint']);
 Route::get('/saint/delete/{id}', [MainController::class,'delete'])
         -> name('saint.delete');
+Route::get('/saint/new', [MainController::class,'addNew'])
+        -> name('saint.new');

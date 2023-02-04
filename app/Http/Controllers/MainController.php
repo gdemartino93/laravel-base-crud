@@ -32,4 +32,9 @@ class MainController extends Controller
        
         return redirect() -> route('saint.home');
     }
+
+    public function addNew(){
+
+        return view('pages.addnew');
+    }
 }
