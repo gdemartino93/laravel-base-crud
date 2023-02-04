@@ -51,4 +51,10 @@ class MainController extends Controller
         $newSaint -> save();
         return redirect() -> route('saint.home');
     }
+    public function saintDelete(){
+        
+        Saint::truncate();
+
+        return redirect() -> route('saint.home');
+    }
 }
