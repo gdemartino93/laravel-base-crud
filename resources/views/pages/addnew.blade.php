@@ -8,9 +8,9 @@
         <label for="luogoDiNascita">Luogo di Nascita</label>
         <input type="text" name="luogoDiNascita">
         <label for="dataDiNascita">Data di nascita</label>
-        <input type="text" name="dataDiNascita">
+        <input type="date" name="dataDiNascita">
         <label for="numeroDiMiracoli">Numero di miracoli effettuati</label>
-        <input type="text" name="numeroDiMiracoli">
+        <input type="number" name="numeroDiMiracoli">
         <button class="btn btn-success my-3"> Aggiungi Nuovo</button>
     </form>
 </div>
