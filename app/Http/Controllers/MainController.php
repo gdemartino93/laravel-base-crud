@@ -37,4 +37,19 @@ class MainController extends Controller
 
         return view('pages.addnew');
     }
+    public function saintStore(Request $request){
+
+        $data = $request -> all();
+
+        $newSaint = new Saint();
+
+        $newSaint -> nome = $data["nome"];
+        $newSaint -> luogoDiNascita = $data["luogoDiNascita"];
+        $newSaint -> dataDiNascita = $data["dataDiNascita"];
+        $newSaint -> numeroDiMiracoli = $data["numeroDiMiracoli"];
+
+        $newSaint -> save();
+        var_dump($data); die();
+    // return redirect() -> route('saint.home', $data);
+    }
 }
