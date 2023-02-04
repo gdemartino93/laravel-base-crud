@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Saint;
 class MainController extends Controller
 {
+    // ritorna home
     public function home(){
 
         $saints = Saint::orderBy('created_at', 'DESC') ->get();
@@ -15,7 +16,7 @@ class MainController extends Controller
         ];
         return view('pages.home', $data);
     }
-
+// cerca saint per id
     public function saint($id){
 
         $saint = Saint::find($id);
@@ -25,6 +26,7 @@ class MainController extends Controller
 
         return view('pages.saint', $data);
     }
+    // dopo aver cercato il santo per id lo eliminata
     public function delete($id){
 
         $saint = Saint::find($id);
@@ -32,11 +34,12 @@ class MainController extends Controller
        
         return redirect() -> route('saint.home');
     }
-
+// ti porta alla rotta del form
     public function addNew(){
 
         return view('pages.addnew');
     }
+// inserisce i dati inseriti nel form all'interno del db
     public function saintStore(Request $request){
 
         $data = $request -> all();
@@ -51,6 +54,8 @@ class MainController extends Controller
         $newSaint -> save();
         return redirect() -> route('saint.home');
     }
+// cancella tutti i dati dal db
+
     public function saintDelete(){
         
         Saint::truncate();
