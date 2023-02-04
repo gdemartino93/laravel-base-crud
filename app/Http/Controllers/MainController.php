@@ -8,7 +8,7 @@ class MainController extends Controller
 {
     public function home(){
 
-        $saints = Saint::all();
+        $saints = Saint::orderBy('created_at', 'DESC') ->get();
 
         $data = [
             "saints" => $saints
@@ -49,7 +49,6 @@ class MainController extends Controller
         $newSaint -> numeroDiMiracoli = $data["numeroDiMiracoli"];
 
         $newSaint -> save();
-        var_dump($data); die();
-    // return redirect() -> route('saint.home', $data);
+        return redirect() -> route('saint.home');
     }
 }
